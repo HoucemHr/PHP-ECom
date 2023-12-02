@@ -1,0 +1,38 @@
+
+.header-links{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+   
+}
+
+button{
+    border: none;
+    background-color: #faf9f8;
+    height: 78px;
+    width: 70px; 
+    vertical-align: middle;
+    padding : 5px;
+    margin-left : 25px;
+    font-family: monospace;
+    font-size: small;
+
+}
+ul li div a button:hover{
+    text-decoration: underline;     
+}
+.user_icon button{
+    height: 100px;
+}
+
+.bag_icon a button{
+    height: 100px;
+}
+
+.user_icon button:hover {
+    text-decoration: underline;
+}
+
+
+
+

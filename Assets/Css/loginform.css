@@ -1,0 +1,27 @@
+
+
+
+form{
+    padding : 0%;
+    height : 500;
+    margin-top: 50px;
+    width: 340px;
+    margin-left: 30px;
+    background-color: #faf9f8;
+    font-size:18px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+label span{
+    color : red;
+}
+
+input{
+    height: 46px;
+    width: 400px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-weight:400;
+}
+

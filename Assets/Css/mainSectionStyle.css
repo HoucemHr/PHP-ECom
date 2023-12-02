@@ -1,0 +1,21 @@
+main{
+    height : 700px;
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    font-family: monospace;
+    font-weight:300;
+    font-size: 17px;
+}
+
+.menu ul li{
+    margin-right : 70px;
+}
