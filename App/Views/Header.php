@@ -10,17 +10,14 @@
     <link rel="stylesheet" href="/Myproject/Assets/Css/headerStyle.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/mainSectionStyle.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/menu.css">
-    
+    <link rel="stylesheet" href="/Myproject/Assets/Css/modalFormStyle.css">    
 </head>
-
-
-
-
 
 <body>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <?php require_once "c:/xampp/htdocs/Myproject/App/Views/LoginModal.php"?>
+    
     <header> 
         <div class="logo">
             <img src="/Myproject/Assets/Images/logo1.png" alt="">
@@ -35,6 +32,8 @@
             <?php require_once "c:/xampp/htdocs/Myproject/App/Views/Menu.php"?>
         </div>
     </main>
+    
+    
     <script  src="/Myproject/Assets/JS/myScript.js"></script>
 
     

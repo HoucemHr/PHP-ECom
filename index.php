@@ -2,12 +2,13 @@
     require_once "Routing/Routes.php";
     //meaning i have supplied an email
     //problem when i click button and mail empty
+    //whatever i echo will be recieved by  the js promise
     if(!empty(file_get_contents("php://input"))){
         $data = file_get_contents("php://input");
         $user = json_decode($data, true)["email"];
         $result = $router->dispatch("/ControllerLogin", $user);
         if($router->dispatch("/ControllerLogin", $user)){
-            echo "1";
+            echo "1";//found
         }
         else{
             echo "0";

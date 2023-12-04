@@ -1,0 +1,80 @@
+
+/*
+
+form{
+    padding : 0%;
+    height : 500;
+    margin-top: 50px;
+    width: 340px;
+    margin-left: 30px;
+    background-color: #faf9f8;
+    font-size:18px;
+    font-weight: 400;
+    font-family: sans-serif;
+}
+
+label span{
+    color : red;
+}
+*/
+.modal-content input{
+    height: 46px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight:400;
+    border: 1px solid rgb(184, 182, 182);    
+}
+
+
+
+.modal-content #message{
+    width: 100%;
+    height: 17px;
+    color: red;
+    font-size: 13px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding : 10px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.modal-content .button1{
+    width : 100%;
+    color: white;
+    margin : 0;
+    height : 50px;
+    background-color: black;
+    margin-top: 3px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.modal-content .button2{
+    width : 100%;
+    color: black;
+    margin : 0;
+    height : 50px;
+    background-color: #faf9f8;
+    margin-top: 7px;
+    font-weight: bolder;
+    font-size: large;
+    border : 1px solid black;
+}
+
+.modal-content .button1:hover{
+    width : 100%;
+    color: white;
+    margin : 0;
+    height : 50px;
+    background-color: rgba(0, 0, 0, 0.623);
+    margin-top: 3px;
+    font-weight: bolder;
+    font-size: large;
+}
