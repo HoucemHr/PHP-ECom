@@ -2,7 +2,7 @@
 
     class App{
         static $host = "localhost";
-        static $dbname = "magasin";
+        static $dbname = "EcomDB";
         static $user = "root";
         static $password  = ""; 
         

@@ -1,20 +1,18 @@
-
-
 <?php 
-
     class Router{
         private $routes;
 
-        public function addRoute($uri, $controllerAction){
-            $this->routes[$uri] = $controllerAction;
+        
+        public function addRoute($uri, $controllerAndAction){
+            $this->routes[$uri] = $controllerAndAction;
         }
 
         private function getAction($uri){
             return isset($this->routes[$uri]) ? $this->routes[$uri] : false;
         }
 
-        public function dispatch($uri){
-            if(!$this->getAction($uri)){
+        public function dispatch($uri, $data = null){
+            if($this->getAction($uri) == false){
                 echo "404 Not Found";
                 return;
             }
@@ -24,12 +22,17 @@
             //here we require the adequate controller and action based on provided uri
             //remebr that router dispatch gets called in index
             require_once "App/Controllers/" . $controllerName . ".php";
-            
-            $controller = new $controllerName();
+            if ($controllerName == "ControllerLogin" and $actionName == "Login"){
+                $controller = new $controllerName();
+                //data(parameter) available at index level
+                return $controller->$actionName($data);
+            }
+            else{
+                $controller = new $controllerName();
             // add $ to action name bcz we want the $actionanme variable and not an actual method called 
             //actionname()
-            $controller->$actionName();
+                $controller->$actionName();
+            }
+            
         }
-
-
     }

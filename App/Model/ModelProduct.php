@@ -7,7 +7,7 @@
 
         public function __construct($db){
             parent::__construct($db);
-            $this->table = "magasin.products";
+            $this->table = "EcomDB.products";
         }
         
         public function findAll(){
@@ -39,7 +39,7 @@
             try{
                 $pdoSt = $this->db->prepare("update " . $this->table . " set Designation = ?, CategoryId = ?, Price = ?,
                 Quantity = ? where ID = ?");
-                echo "HELLO";
+                
                 $data[sizeof($data)] = $id;
                 $pdoSt->execute($data);
                 return 1;

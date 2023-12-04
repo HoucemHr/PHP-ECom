@@ -1,23 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Myproject/Assets/Css/main.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/pageStyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/TopRightStyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/headerStyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/mainSectionStyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/menu.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/ProdContainerStyle.css">
+    
+</head>
 
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Designation</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Quantity</th>
-        </tr>
-    </thead>
-    <tbody>
-        <?php foreach($products as $r){?>
-            <tr>
-                <?php foreach($r as $c){?>
-                    <th><?php echo $c?></th>
-                <?php }?>
-            </tr>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <?php require_once "c:/xampp/htdocs/Myproject/App/Views/LoginModal.php"?>
+    <header> 
+        <div class="logo">
+            <img src="/Myproject/Assets/Images/logo1.png" alt="">
+        </div>
+        <div class="header-section">
+            <?php require_once "c:/xampp/htdocs/Myproject/App/Views/TopRight.php" ?>
+        </div>
+    </header>
+    
+    <main>
+        <div class="menu">
+            <?php require_once "c:/xampp/htdocs/Myproject/App/Views/Menu.php"?>
+        </div>
+    </main>
+
+    <div class="prod_container">
+        <div class="products">
+            <?php foreach($products as $product){?>
+                <div class=<?php echo "prod" . $product["ID"] ?>>
+                    <img src=<?= $product["Image"]?> alt=""><br>
+                    <span><?php echo $product["Label"] . "<br>" . "$" . $product["Price"]?></span>
+                </div>
             <?php }?>
-
-    </tbody>
-</table>
+        </div>
+    
+    </div>
+    <script  src="/Myproject/Assets/JS/myScript.js"></script>
