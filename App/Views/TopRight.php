@@ -19,7 +19,7 @@
     </li>
     <li>
         <div class="bag_icon">
-            <a href="">
+            <a href="/Myproject/index.php?url=ShoppingBag">
                 <button><img src="/Myproject/Assets/Images/bag.png" alt="">Shopping bag</button>
             </a>
             

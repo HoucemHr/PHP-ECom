@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="/Myproject/Assets/Css/mainSectionStyle.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/menu.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/modalFormStyle.css">    
+    <link rel="stylesheet" href="/Myproject/Assets/Css/homeContentStyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/bagstyle.css">
 </head>
 
 <body>
@@ -27,8 +29,8 @@
         </div>
     </header>
     
-    <main>
-    <div class="menu">
+    <main><!--Here main contains menu list -->
+        <div class="menu">
             <?php require_once "c:/xampp/htdocs/Myproject/App/Views/Menu.php"?>
         </div>
     </main>

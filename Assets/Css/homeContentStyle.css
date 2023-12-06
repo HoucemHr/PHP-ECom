@@ -1,0 +1,28 @@
+.homebody{
+    width: 100%;
+    height : 1700px;
+    margin: 0%;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.homecontent1{
+    width: 100%;
+    height : 750px;
+    background-image: url('/Myproject/Assets/Images/homecontent7.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 30px;
+
+}
+
+.homecontent2{
+    height : 750px;
+    width: 100%;
+    background-image: url("/Myproject/Assets/Images/homecontent8.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}

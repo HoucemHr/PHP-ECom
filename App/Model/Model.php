@@ -10,16 +10,5 @@
     public function __construct($db /*this variable serves as a connectio to a db*/){
         $this->db = $db; 
     }
-
-    public abstract function findAll();
-
-    public abstract function find($key);
-
-    public abstract function delete($id);
-
-    public abstract function update($id, $data);
-
-    public abstract function save($data);
     
-
 }

@@ -62,5 +62,32 @@
                 die( "Insert failure".$e->getMessage());
             } 
         }
+        public function males(){
+            $query = "select * from " . $this->table . " where Gender = 'M'";
+            try{
+                return $this->db->query($query)->fetchAll(PDO::FETCH_ASSOC);
+            }catch(PDOException $e){
+                echo "Failure : " . $e->getMessage();
+            }
+        }
+
+        public function females(){
+            $query = "select * from " . $this->table . " where Gender = 'F'";
+            try{
+                return $this->db->query($query)->fetchAll(PDO::FETCH_NUM);
+            }catch(PDOException $e){
+                echo "Failure : " . $e->getMessage();
+            }             
+        }
+
+        public function kids(){
+            //fix the age column
+            $query = "select * from " . $this->table . " where Age = kids ";
+            try{
+                return $this->db->query($query)->fetchAll(PDO::FETCH_NUM);
+            }catch(PDOException $e){
+                echo "Failure : " . $e->getMessage();
+            }  
+        }
 
     }

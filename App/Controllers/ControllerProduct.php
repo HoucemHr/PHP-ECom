@@ -1,7 +1,7 @@
 <?php
     $root = $_SERVER["DOCUMENT_ROOT"] . '/Myproject/';
     require_once $root . 'App/Model/ModelProduct.php';
-    
+
     //require_once 'App/Model/Model.php';
     //require_once 'App/Model/Database.php';
     require_once $_SERVER["DOCUMENT_ROOT"] . '/Myproject/'.'App/Controllers/Controller.php';
@@ -42,7 +42,23 @@
         }
 
         public function edit($id){
-            $old = $this->model->save($id);       
+            $old = $this->model->save($id);      
+            
+        }
+        public function males(){
+            $products = $this->model->males();
+            require_once "c:/xampp/htdocs/Myproject/App/Views/Product/ProdList.php";
+            
+        }
+        public function females(){
+            $products = $this->model->females();
+            require_once "c:/xampp/htdocs/Myproject/App/Views/Product/ProdList.php";
+            
+        }
+
+        public function kids(){
+            $products = $this->model->kids();
+            require_once "c:/xampp/htdocs/Myproject/App/Views/Product/ProdList.php";
         }
 
 
