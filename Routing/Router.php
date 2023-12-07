@@ -21,7 +21,7 @@
 
             //here we require the adequate controller and action based on provided uri
             //remebr that router dispatch gets called in index
-            require_once "App/Controllers/" . $controllerName . ".php";
+            require_once "c:/xampp/htdocs/Myproject/App/Controllers/" . $controllerName . ".php";
             if ($controllerName == "ControllerLogin" and $actionName == "Login"){
                 $controller = new $controllerName();
                 //data(parameter) available at index level

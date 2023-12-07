@@ -45,6 +45,7 @@ label span{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
 .modal-content .button1{
     width : 100%;
     color: white;
@@ -77,4 +78,53 @@ label span{
     margin-top: 3px;
     font-weight: bolder;
     font-size: large;
+}
+
+/*
+.genderdiv{
+    height : 60px;
+    width: 100%;
+    position: relative;
+    
+}
+#gender{
+    width: 100px;
+    height:28px;
+    position: absolute;
+    left : 0px;
+}*/
+
+/*------------------------------------------------*/
+
+
+
+#examplemodal2 input{
+    height: 30px;
+    width: 100%;
+    font-size: 1rem;
+    font-weight:400;
+    border: 1px solid rgb(184, 182, 182);    
+}
+
+#becomeamember{
+    width : 100%;
+    color: white;
+    margin : 0;
+    height : 50px;
+    background-color: black;
+    margin-top: 3px;
+    font-weight: bolder;
+    font-size: large;
+}
+
+
+#becomeamember:hover{
+    width : 100%;
+    color: white;
+    margin : 0;
+    height : 50px;
+    background-color: rgba(0, 0, 0, 0.623);
+    margin-top: 3px;
+    font-weight: bolder;
+    font-size: large;    
 }

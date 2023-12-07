@@ -48,3 +48,61 @@ document.getElementById("testjs").addEventListener("click", function(){
         })
     }
 }) ;
+
+
+document.getElementById("becomeamember").addEventListener("click", function(){
+    let user = {
+        "email" : document.getElementById("registeremail").value,
+        "pass" : document.getElementById("registerpassword").value,
+        "fname" : document.getElementById("registerfname").value,
+        "lname" : document.getElementById("registerlname").value
+    }
+    if(user["email"] == ""){
+        console.log("empty mail");
+        document.getElementById("registermessage").innerHTML = "<span id =emptyrmail >Make Sure To Supply An Email</span>";
+        setTimeout(function(){document.getElementById("emptyrmail").remove();}
+        , 1200);
+
+
+    }else if(user["pass"] == ""){
+        document.getElementById("registermessage").innerHTML = "<span id =emptyrpass >Make Sure To Supply A Password</span>";
+        setTimeout(function(){document.getElementById("emptyrpass").remove();}
+        , 1200);
+    
+    
+    
+    }else if(user["fname"] == ""){
+        document.getElementById("registermessage").innerHTML = "<span id ='emptyfname'>Make Sure To Supply Your First Name</span>";
+        setTimeout(function(){document.getElementById("emptyfname").remove();}
+        , 1200);
+    
+    
+    
+    }else if(user["lname"] == ""){
+        document.getElementById("registermessage").innerHTML = "<span id =emptylname >Make Sure To Supply Your Last Name</span>";
+        setTimeout(function(){document.getElementById("emptylname").remove();}
+        , 1200);
+    }else{
+    
+        fetch("/Myproject/Conf/processing2.php", {
+            "method" : "POST",
+            "headers" : {
+                "Content-Type" :"application/json; charset =utf-8"
+            },
+            "body":JSON.stringify(user)}
+        ).then(function(response){
+            return response.text();
+        }).then(function(data){
+            //using trim because included files might contain whitespaces wchich will be included in our text response
+            if(data.trim() == "Found"){
+                document.getElementById("registermessage").innerHTML = "<span id = existant >This Email Is Already Registered</span>";
+                setTimeout(function(){document.getElementById("existant").remove();}
+                , 1200);
+            }
+            else{
+                
+            }
+            
+        })
+    }
+}) ;

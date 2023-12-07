@@ -17,6 +17,14 @@
         <?php if(!isset($_SESSION)){?>
             <button data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up/In</button>
         <?php }?>
+        <br><br><br><br>
+        <img src="/Myproject/Assets/Images/payments.png" alt="" style="margin-left: 5%;"><br>
+        <span style="font-size: small; margin-left: 5%;">We support</span><br>
+        <img src="/Myproject/Assets/Images/banks.png" alt="" style="margin-left: 3%;"><br><br>  
+        <img src="/Myproject/Assets/Images/delivery.png" alt="" style="margin-left: 5%;"><br>
+        <span style="margin-left: 5%; font-size:small">International rapid shipping!</span>
+        
+
     </div>
 
     some tect

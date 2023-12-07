@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="/Myproject/Assets/Css/modalFormStyle.css">    
     <link rel="stylesheet" href="/Myproject/Assets/Css/homeContentStyle.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/bagstyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/ProdContainerStyle.css">
 </head>
 
 <body>
@@ -37,6 +38,8 @@
     
     
     <script  src="/Myproject/Assets/JS/myScript.js"></script>
+
+
 
     
     
