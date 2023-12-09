@@ -13,8 +13,7 @@
 
         public function dispatch($uri, $data = null){
             if($this->getAction($uri) == false){
-                echo "404 Not Found";
-                return;
+                die ("404 Action Not Found");
             }
             //reoute[uri] has form controller@controlleraction
             list($controllerName, $actionName) = explode('@', $this->getAction($uri));
@@ -24,8 +23,11 @@
             require_once "c:/xampp/htdocs/Myproject/App/Controllers/" . $controllerName . ".php";
             if ($controllerName == "ControllerLogin" and $actionName == "Login"){
                 $controller = new $controllerName();
-                //data(parameter) available at index level
+                //data(parameter) available at index level and we want a value returned by dispatcher
                 return $controller->$actionName($data);
+            }elseif($controllerName == "ControllerLogin" and $actionName == "newUser"){
+                $controller = new $controllerName();
+                $controller->$actionName($data);
             }
             else{
                 $controller = new $controllerName();

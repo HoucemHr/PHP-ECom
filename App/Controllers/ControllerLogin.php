@@ -12,15 +12,12 @@ class ControllerLogin extends Controller {
 
     //set to null for use cases that don't need it 
     public function loginCheck($data = null){
-        $exists = $this->model->fetchByMail($data);
-        /*if ($exists){
-            return 1;
-        }
-        return 0;*/
+        $exists = $this->model->fetchByMail($data);//result set or false
         return $exists;
     }
 
-    public function addUser($data){
-
+    public function newUser($userData){
+        $this->model->addUser($userData);
     }
+
 }

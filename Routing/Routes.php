@@ -10,6 +10,6 @@
     $router->addRoute("/kids", "ControllerProduct@kids");
     $router->addRoute("/ShoppingBag", "ControllerBag@index");
     $router->addRoute("/Home", "ControllerHome@index");
-    $router->addRoute("/ControllerLogin/addUser", "ControllerLogin@addUser");
+    $router->addRoute("/ControllerLogin/newUser", "ControllerLogin@newUser");
     
 

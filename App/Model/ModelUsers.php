@@ -24,4 +24,13 @@ class ModelUsers{
         }
         return $user;
     }
+
+    public function addUser($userData){
+        try{
+            $query = "insert into EcomDB.users values(null, :email, :password , null)";
+            $prepared = $this->connection->prepare($query)->execute($userData);
+        }catch(PDOException $e){
+            echo "Add User Failed With : " . $e->getMessage();
+        }     
+    }
 }

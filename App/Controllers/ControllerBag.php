@@ -7,7 +7,9 @@
             $this->model = new ModelBag(Database::getInstance()->getConnection());
         }
         public function index(){
-            $bagProducts = $this->model->bagById();
+            if(isset($_SESSION["email"])){
+                $bagProducts = $this->model->bagByMail();
+            }
             require_once "c:/xampp/htdocs/Myproject/App/Views/Bag.php";
         }
     }

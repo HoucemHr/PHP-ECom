@@ -1,4 +1,8 @@
 <?php
+    session_start();
+    if(!isset($_SESSION["email"])){
+        session_destroy();
+    }
     require_once "Routing/Routes.php";
     //meaning i have supplied an email
     //problem when i click button and mail empty

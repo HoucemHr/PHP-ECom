@@ -3,6 +3,15 @@
 <div class ="homebody">
     <div class="homecontent1"></div><br>    
     <div class="homecontent2"></div>
+    <br>
+    <?php 
+    if(isset($_SESSION)) {  
+        echo $_SESSION["email"];
+    }else{
+        echo "somthing is wrong : " ; 
+    }
+    
+    ?>
 </div>
 
 

@@ -11,6 +11,9 @@ function getXMLHTTPRequest(){
     }
     return xhr;
 }
+
+
+
 //Handling inputs in login form
 document.getElementById("testjs").addEventListener("click", function(){
     let user = {
@@ -48,6 +51,9 @@ document.getElementById("testjs").addEventListener("click", function(){
         })
     }
 }) ;
+
+
+
 
 
 document.getElementById("becomeamember").addEventListener("click", function(){
@@ -99,8 +105,12 @@ document.getElementById("becomeamember").addEventListener("click", function(){
                 setTimeout(function(){document.getElementById("existant").remove();}
                 , 1200);
             }
+            else if(data.trim() == "Success"){
+                window.location.href = "/Myproject/index.php";
+            }
             else{
                 
+                console.log("Something is not right, data =" + data);
             }
             
         })
