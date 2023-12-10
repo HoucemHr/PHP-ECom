@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/Myproject/Assets/Css/homeContentStyle.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/bagstyle.css">
     <link rel="stylesheet" href="/Myproject/Assets/Css/ProdContainerStyle.css">
+    <link rel="stylesheet" href="/Myproject/Assets/Css/ProductByIdStyle.css">
 </head>
 
 <body>
