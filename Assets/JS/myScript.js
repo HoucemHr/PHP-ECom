@@ -32,7 +32,7 @@ document.getElementById("testjs").addEventListener("click", function(){
         , 1200);
     }
     else{
-        fetch("/Myproject/index.php", {
+        fetch("/Myproject/Conf/processing1.php", {
             "method" : "POST",
             "headers" : {
                 "Content-Type" :"application/json; charset =utf-8"
