@@ -16,3 +16,12 @@
 .products div{
     margin-right: 8px;
 }
+
+.prod_container a{
+    text-decoration: none;
+    color: black;
+}
+
+.prod_container a:hover{
+    text-decoration: underline black;
+}

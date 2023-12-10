@@ -62,3 +62,15 @@
     display: flex;
     flex-direction: row;
 }
+
+
+#orderBtn{
+    width : 90%;
+    height: 60px;
+    margin: 5%; 
+    background-color: white;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    border: 1px solid black;
+}

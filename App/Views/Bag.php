@@ -33,7 +33,9 @@
         <?php if(!isset($_SESSION)){?>
             <button data-bs-toggle="modal" data-bs-target="#exampleModal">Sign Up/In</button>
         <?php }else{ ?>
-            <button>Order</button>
+            <form action="/Myproject/index.php?url=ControllerBag/order" method="post">
+                <input type="submit" value="Order" id = "orderBtn">
+            </form>
         <?php }?>
         <br><br><br><br>
         <img src="/Myproject/Assets/Images/payments.png" alt="" style="margin-left: 5%;"><br>

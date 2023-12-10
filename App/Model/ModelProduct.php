@@ -1,6 +1,6 @@
 
 <?php
-    require_once $_SERVER["DOCUMENT_ROOT"] . '/Myproject/'."App/Model/Model.php";
+    require_once $_SERVER["DOCUMENT_ROOT"] . '/Myproject/' . "App/Model/Model.php";
 
 
     class  ProductModel extends Model{
@@ -23,8 +23,8 @@
 
         public function find($key){
             try{
-                $query = "select * from " . $this->table . " where ID = 1";
-                return $this->db->query($query)->fetch(PDO::FETCH_NUM);
+                $query = "select Label, IMG, Price  from " . $this->table . " where ID = $key";
+                return $this->db->query($query)->fetch(PDO::FETCH_ASSOC);
             }catch(PDOException $e){
                 die("Fetching failed".$e->getMessage());
             }
@@ -82,7 +82,7 @@
 
         public function kids(){
             //fix the age column
-            $query = "select * from " . $this->table . " where Age = kids ";
+            $query = "select * from " . $this->table . " where Age < 16 ";
             try{
                 return $this->db->query($query)->fetchAll(PDO::FETCH_NUM);
             }catch(PDOException $e){

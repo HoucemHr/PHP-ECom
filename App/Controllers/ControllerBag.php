@@ -12,4 +12,14 @@
             }
             require_once "c:/xampp/htdocs/Myproject/App/Views/Bag.php";
         }
+
+        public function addToBag(){
+            $this->model->addProduct();
+            header("Location: /Myproject/index.php");
+        }
+
+        public function order(){
+            $this->model->addToOrders();
+            header("Location: /Myproject/index.php");
+        }
     }

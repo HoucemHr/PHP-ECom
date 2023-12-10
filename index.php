@@ -4,9 +4,7 @@
         session_destroy();
     }
     require_once "Routing/Routes.php";
-    //meaning i have supplied an email
-    //problem when i click button and mail empty
-    //whatever i echo will be recieved by  the js promise
+
     if(!empty(file_get_contents("php://input"))){
         $data = file_get_contents("php://input");
         $user = json_decode($data, true)["email"];
@@ -27,7 +25,7 @@
     
 
     //the added / to take care of empty string after localhost
-    //however all our url will have an additional prefixed / if isset
+    //however all our url will have an additional prefixed / if isset according to the above code
     // so this extra / must be prefixed to the route key
     //custom url --> route --> real url 
    

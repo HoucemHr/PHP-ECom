@@ -12,6 +12,7 @@
         }
 
         public function dispatch($uri, $data = null){
+
             if($this->getAction($uri) == false){
                 die ("404 Action Not Found");
             }
@@ -23,16 +24,19 @@
             require_once "c:/xampp/htdocs/Myproject/App/Controllers/" . $controllerName . ".php";
             if ($controllerName == "ControllerLogin" and $actionName == "Login"){
                 $controller = new $controllerName();
-                //data(parameter) available at index level and we want a value returned by dispatcher
                 return $controller->$actionName($data);
+
             }elseif($controllerName == "ControllerLogin" and $actionName == "newUser"){
                 $controller = new $controllerName();
                 $controller->$actionName($data);
+            }elseif($controllerName == "ControllerProduct" and $actionName == "show"){
+                if(isset($_GET["id"])){
+                    $controller = new $controllerName();
+                    $controller->$actionName($_GET["id"]);
+                }
             }
             else{
                 $controller = new $controllerName();
-            // add $ to action name bcz we want the $actionanme variable and not an actual method called 
-            //actionname()
                 $controller->$actionName();
             }
             

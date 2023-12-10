@@ -38,7 +38,7 @@
 
         public function show($id){
             $row = $this->model->find($id);
-            include_once("App/Views/Product/find.php");
+            require_once("C:/xampp/htdocs/Myproject/App/Views/Product/ProductById.php");
         }
 
         public function edit($id){

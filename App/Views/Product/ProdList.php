@@ -5,7 +5,7 @@
             <?php foreach($products as $product){?>
                 <div class=<?php echo "prod" . $product["ID"] ?>>
                     <img src=<?= $product["Image"]?> alt=""><br>
-                    <span><a href="/Myproject/index?url=ControllerProduct/show">
+                    <span><a href="/Myproject/index.php?url=ControllerProduct/show&id=<?= $product["ID"]?>">
                         <?php echo $product["Label"]?></a>
                     </span><br>
                     <span> <?php echo "$" . $product["Price"]?></span>
